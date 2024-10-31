@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+let arr = [
+  {
+    title: "Dağ 1",
+    par: "Açıklama 1"
+  }, {
+    title: "Dağ 2",
+    par: "Açıklama 2"
+  }, {
+    title: "Dağ 3",
+    par: "Açıklama 3"
+  }, {
+    title: "Dağ 4",
+    par: "Açıklama 4"
+  },
+];
+const App = () => (
+  (<div><h1>Başlık</h1><p>Başlangıç</p>
+    <div className='Cards'>
+      {arr.map(({ title, par }) =>
+        (<Card title={title} par={par} />)
+
+      )}
+
+
+
     </div>
-  );
-}
+  </div>))
+
 
 export default App;
